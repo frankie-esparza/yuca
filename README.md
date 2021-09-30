@@ -256,7 +256,7 @@ const rootReducer = combineReducers({
 The `produceReducer` is responsible for handling the produce information in the
 store, or the produce slice of state.
 
-Nowproduce you need to define the `produceReducer`. Create a file in the `store`
+Now you need to define the `produceReducer`. Create a file in the `store`
 folder called `produce.js`. Define a function called `produceReducer` with
 `state` and `action` as parameters. The `state` should default to an empty
 object. Add a `switch/case` statement on `action.type` inside of the function
@@ -647,7 +647,7 @@ should be toggled to `true`/`false`.
 
 ## Phase 8: Redux selectors
 
-Instead of creating a different selector function every time you use the 
+Instead of creating a different selector function every time you use the
 `useSelector` Hook for the same purpose (e.g., extracting the `produce` slice of
 state), you can define a single function to be used anytime you need the same
 information from the Redux store state.
