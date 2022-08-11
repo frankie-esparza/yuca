@@ -1,10 +1,10 @@
-## Phase 2: Displaying a list of Produce
+# Grocery Store, Phase 2: Displaying A List Of Produce
 
 To display a list of produce, you need to first store the list of produce in the
 Redux store. Then you need to extract the produce from the store for display in
 a React component.
 
-### Produce Reducer
+## Produce reducer
 
 First, you need to create space in the Redux store for the produce. To do this,
 you will add a key in the Redux store for handling the produce information. This
@@ -25,7 +25,7 @@ The `produceReducer` is responsible for handling the produce information in the
 store, or the produce slice of state.
 
 Now you need to define the `produceReducer`. Create a file in the `store`
-folder called `produce.js`. Define a function called `produceReducer` with
+folder called __produce.js__. Define a function called `produceReducer` with
 `state` and `action` as parameters. The `state` should default to an empty
 object. Add a `switch/case` statement on `action.type` inside of the function
 and return the state as the `default` case. Export the `produceReducer` as
@@ -49,29 +49,29 @@ could be an array, a boolean, etc.
 The produce slice of state should be an object with produce id's as keys. The
 values should be objects of produce information.
 
-Import the `produceReducer` into the store file, `store/index.js`.
+Import the `produceReducer` into the store file, __store/index.js__.
 
-#### Test the reducer
+### Test the reducer
 
 Now, test the reducer by refreshing at [http://localhost:3000]. The state in the
 Redux dev tools extension should show a key of `produce` with the value of an
 empty object! Also, if you call `store.getState()` in the console, you'll get
 an object with a key of produce and an empty object as the value.
 
-### Populate the produce slice of state
+## Populate the produce slice of state
 
-You will use the mock data in the `src/mockData/produce.json` file to add
+You will use the mock data in the __src/mockData/produce.json__ file to add
 produce to the produce slice of state. To populate the produce slice of state,
 you need to trigger a change to the Redux store state. This can only be done by
 dispatching an action.
 
-In the `store/produce.js` file, create and export an action creator called
+In the __store/produce.js__ file, create and export an action creator called
 `populateProduce`. This function should return an object with a unique `type`
 key. Create a constant called `POPULATE` and set it to a string literal of
 `produce/POPULATE`. Set the key of `type` in the return of `populateProduce` to
 this constant.
 
-Import the `produce.json` as `produceData`. Set a key of `produce` in the return
+Import __produce.json__ as `produceData`. Set a key of `produce` in the return
 of `populateProduce` to `produceData`. The key of `produce` is a payload key.
 
 If you try dispatching the `populateProduce` action right now, the Redux store
@@ -140,7 +140,7 @@ This conversion from an array into this object structure is known as
 object structure than in an array. Normalizing data is a common practice even
 outside of Redux, so practice getting comfortable with it!
 
-#### Testing `populateProduce` action
+### Testing `populateProduce` action
 
 To test the `populateProduce` action, import it into the entry file and attach
 it to the `window` just like you did with the `store`.
@@ -190,7 +190,7 @@ Even if your state looks the way you expect it to look, try adding `console.log`
 and/or `debugger` into the action creator and reducer to examine how and when
 they are invoked.
 
-### Programmatically dispatch `populateProduce`
+## Programmatically dispatch `populateProduce`
 
 To programmatically dispatch the `populateProduce` action instead of doing it
 through the browser console, you will dispatch this action when the `App`
@@ -230,7 +230,7 @@ console. "React Hook useEffect has a missing dependency: 'dispatch'." Add
 never change across re-renders so `useEffect` should only dispatch the action
 once.
 
-### Display the produce in a list
+## Display the produce in a list
 
 So far, you added the produce mock data into the Redux store state but nothing
 changed on your actual React application. To display the produce, you need the

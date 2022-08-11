@@ -1,3 +1,8 @@
+# Grocery Store, Phase 8 And Bonuses
+
+In Phase 8, you will implement Redux selectors. Bonus phases then ask you to
+order the produce in the cart and open the cart side bar programmatically.
+
 ## Phase 8: Redux selectors
 
 Instead of creating a different selector function every time you use the
@@ -6,7 +11,7 @@ state), you can define a single function to be used anytime you need the same
 information from the Redux store state.
 
 For example, to get an array of all the produce in the Redux store state, you
-can use the following selector function in the `src/store/produce.js` file:
+can use the following selector function in the __src/store/produce.js__ file:
 
 ```js
 // ./src/store/produce.js

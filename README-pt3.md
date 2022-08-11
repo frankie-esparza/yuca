@@ -1,3 +1,8 @@
+# Grocery Store, Phases 3-4
+
+In Phases 3-4, you will implement the functionality to add (Phase 3) and remove
+(Phase 4) produce to/from the cart.
+
 ## Phase 3: Add produce to the cart
 
 When the "Checkout" button in the navigation bar is clicked, the side bar
@@ -9,12 +14,12 @@ needs to know which produce and how much of it was added to the cart. You need a
 cart slice of state that will hold an object with produce id's as its keys and
 objects with a `count` property as its values.
 
-### Cart Reducer
+### Cart reducer
 
-Create a `cart.js` file in `src/store` and define and export a `cartReducer`
+Create a __cart.js__ file in __src/store__ and define and export a `cartReducer`
 from this file. Add the `cart` slice of state with this as the reducer in the
-store file (`src/store/index.js`). Use the `produceReducer` as an example if you
-get stuck. Test the reducer in the same way as the way you tested the
+store file (__src/store/index.js__). Use the `produceReducer` as an example if
+you get stuck. Test the reducer in the same way as the way you tested the
 `produceReducer`.
 
 The store state should now look something like this:

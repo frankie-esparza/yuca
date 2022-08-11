@@ -29,9 +29,9 @@ The `Cart`, `ProduceList`, and `ProduceDetails` are the components you need to
 connect to the Redux store. Take a look at the code there to familiarize
 yourself with it.
 
-_src/mockData/produce.json_ provides the mock data that you will use to populate
-the Redux store. The file has a JSON array of objects. Each object has the
-following structure:
+__src/mockData/produce.json__ provides the mock data that you will use to
+populate the Redux store. The file has a JSON array of objects. Each object has
+the following structure:
 
 ```plaintext
 {
@@ -62,9 +62,9 @@ component tree).
 
 First thing you need to do is set up and configure the Redux store.
 
-Create a folder called `store` inside of `src`. Inside of that folder, create
-a file called `index.js`. In this file, you will define the root reducer and a
-function that will return a Redux store.
+Create a folder called __store__ inside of __src__. Inside of that folder,
+create a file called __index.js__. In this file, you will define the root
+reducer and a function that will return a Redux store.
 
 Import `createStore`, `combineReducers`, `applyMiddleware`, and `compose` from
 redux.
@@ -156,7 +156,7 @@ export default configureStore;
 
 Now, you need to wrap the React application with the Redux store provider.
 
-Import the `configureStore` function into the entry file, `src/index.js`.
+Import the `configureStore` function into the entry file, __src/index.js__.
 Import the `Provider` component from `react-redux`.
 
 Initialize a variable called `store` and set it to the return of
