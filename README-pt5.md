@@ -27,7 +27,7 @@ following lines:
   const produceArr = Object.values(produce);
 ```
 
-Replace it with this line:
+Replace them with this line:
 
 ```js
 const produceArr = useSelector(getAllProduce);
