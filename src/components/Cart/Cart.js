@@ -1,9 +1,10 @@
 import CartItem from './CartItem';
 import './Cart.css';
+import { useSelector } from 'react-redux';
 
 function Cart() {
-  const cart = {};
-  const produce = {};
+  const cart = useSelector(state => state.cart);
+  const produce = useSelector(state => state.produce);
 
   const cartItems = Object.values(cart)
     .map(item => {
@@ -30,7 +31,7 @@ function Cart() {
   return (
     <div className="cart">
       <ul>
-        {cartItems.map(item => <CartItem key={item.id} item={item}/>)}
+        {cartItems.map(item => <CartItem key={item.id} item={item} />)}
       </ul>
       <hr />
       <form onSubmit={onSubmit}>
