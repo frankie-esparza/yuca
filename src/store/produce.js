@@ -10,6 +10,8 @@ export function populateProduce() {
     }
 }
 
+export const getAllProduce = (state) => Object.values(state.produce);
+
 export default function produceReducer(state = {},
     action) {
     switch (action.type) {
