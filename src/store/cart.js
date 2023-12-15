@@ -14,6 +14,8 @@ export const getAllCartItems = (state) => {
     return cartItems.map(item => ({ ...item, ...produce[item.id] }));
 };
 
+let numItemsInCart = 0;
+
 export default function cartReducer(state = {}, action) {
     let id = action.id;
     let newState = { ...state };
@@ -21,11 +23,12 @@ export default function cartReducer(state = {}, action) {
     switch (action.type) {
         case ADD:
             if (state[id]) newState[id].count++;
-            else newState[id] = { id: id, count: 1 };
+            else newState[id] = { id: id, count: 1, order: numItemsInCart++ };
             return newState;
 
         case REMOVE:
             delete newState[id];
+            numItemsInCart--;
             return newState;
 
         case INCREMENT:
