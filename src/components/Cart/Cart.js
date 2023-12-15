@@ -20,7 +20,9 @@ function Cart() {
     );
   }
 
-  const cartItems = useSelector(getAllCartItems);
+  let cartItems = useSelector(getAllCartItems);
+  let sortedCartItems = cartItems.sort((a, b) => a.order - b.order);
+  console.log('SORTED CART ITEMS', sortedCartItems);
 
   if (!cartItems || !cartItems.length)
     return (
@@ -32,7 +34,7 @@ function Cart() {
   return (
     <div className="cart">
       <ul>
-        {cartItems.map(item => <CartItem key={item.id} item={item} />)}
+        {sortedCartItems.map(item => <CartItem key={item.id} item={item} />)}
       </ul>
       <hr />
       <form onSubmit={onSubmit}>
