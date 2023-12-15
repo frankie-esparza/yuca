@@ -1,35 +1,16 @@
 import CartItem from './CartItem';
 import './Cart.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeProduce } from '../../store/cart';
+import { removeProduce, getAllCartItems } from '../../store/cart';
 
 function Cart() {
   const cart = useSelector(state => state.cart);
-  const produce = useSelector(state => state.produce);
   const dispatch = useDispatch();
 
-  const handlePurchaseButtonClick = () => {
+  const onPurchaseButtonClick = () => {
     let cartIds = Object.keys(cart);
-    console.log('CART IDS', cartIds);
-
-    cartIds.forEach(id => {
-      dispatch(removeProduce(id))
-    })
+    cartIds.forEach(id => dispatch(removeProduce(id)));
   };
-
-  const cartItems = Object.values(cart)
-    .map(item => {
-      return {
-        ...item,
-        ...produce[item.id]
-      };
-    });
-
-  if (!cartItems || !cartItems.length) return (
-    <div className="cart">
-      No items in the cart. Start selecting items to purchase.
-    </div>
-  );
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -38,6 +19,15 @@ function Cart() {
       `${cartItems.map(item => `${item.count} of ${item.name}`).join('\n')}`
     );
   }
+
+  const cartItems = useSelector(getAllCartItems);
+
+  if (!cartItems || !cartItems.length)
+    return (
+      <div className="cart">
+        No items in the cart. Start selecting items to purchase.
+      </div>
+    );
 
   return (
     <div className="cart">
@@ -48,7 +38,7 @@ function Cart() {
       <form onSubmit={onSubmit}>
         <button
           type="submit"
-          onClick={handlePurchaseButtonClick}
+          onClick={onPurchaseButtonClick}
         >Purchase</button>
       </form>
     </div>

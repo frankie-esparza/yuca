@@ -10,9 +10,9 @@ function CartItem({ item }) {
     setCount(item.count);
   }, [item.count]);
 
-  const handleRemoveButtonClick = () => dispatch(removeProduce(item.id));
-  const handlePlusButtonClick = () => dispatch(incrementProduce(item.id));
-  const handleMinusButtonClick = () => dispatch(decrementProduce(item.id));
+  const onRemoveButtonClick = () => dispatch(removeProduce(item.id));
+  const onPlusButtonClick = () => dispatch(incrementProduce(item.id));
+  const onMinusButtonClick = () => dispatch(decrementProduce(item.id));
 
   return (
     <li className="cart-item">
@@ -24,19 +24,19 @@ function CartItem({ item }) {
         />
         <button
           className="cart-item-button"
-          onClick={handlePlusButtonClick}
+          onClick={onPlusButtonClick}
         >
           +
         </button>
         <button
           className="cart-item-button"
-          onClick={handleMinusButtonClick}
+          onClick={onMinusButtonClick}
         >
           -
         </button>
         <button
           className="cart-item-button"
-          onClick={handleRemoveButtonClick}
+          onClick={onRemoveButtonClick}
         >
           Remove
         </button>
