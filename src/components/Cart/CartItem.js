@@ -10,7 +10,7 @@ function CartItem({ item }) {
     setCount(item.count);
   }, [item.count]);
 
-  const handleRemoveButtonClick = () => dispatch(removeProduce(item.id))
+  const handleRemoveButtonClick = () => dispatch(removeProduce(item.id));
   const handlePlusButtonClick = () => dispatch(incrementProduce(item.id));
   const handleMinusButtonClick = () => dispatch(decrementProduce(item.id));
 
