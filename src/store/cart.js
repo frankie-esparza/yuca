@@ -14,7 +14,9 @@ export const getAllCartItems = (state) => {
     return cartItems.map(item => ({ ...item, ...produce[item.id] }));
 };
 
-let numItemsInCart = 0;
+// Note: this is NOT the num items currently in the cart so that when an
+// item is removed, the items in the cart still show up in the order they were added
+let numItemsAddedToCart = 1;
 
 export default function cartReducer(state = {}, action) {
     let id = action.id;
@@ -23,12 +25,11 @@ export default function cartReducer(state = {}, action) {
     switch (action.type) {
         case ADD:
             if (state[id]) newState[id].count++;
-            else newState[id] = { id: id, count: 1, order: numItemsInCart++ };
+            else newState[id] = { id: id, count: 1, order: numItemsAddedToCart++ };
             return newState;
 
         case REMOVE:
             delete newState[id];
-            numItemsInCart--;
             return newState;
 
         case INCREMENT:
