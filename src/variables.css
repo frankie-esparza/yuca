@@ -1,0 +1,22 @@
+:root {
+    --black: #202123;
+    --white: #FFFFFF;
+    --light-grey: #E9ECEF;
+    --grey: #B4B4B8;
+    --creme: #EADED7;
+    --tan: #B08A69;
+   
+    --font-largest: 50;
+    --font-larger: 30;
+    --font-large: 20;
+    --font-medium: 18;
+    --font-small: 16;
+    --font-smallest: 14;
+
+    --border-radius-dropdown: 15px;
+    --border-radius-buttons: 20px;
+    --border-radius-thumbnails: 25px;
+
+    --max-z-index: 1000;
+    --second-to-max-z-index: 999;
+}
