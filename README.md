@@ -5,7 +5,6 @@ A stateful grocery store app built with React, React Hooks, & Redux
 [![Watch the video](https://raw.githubusercontent.com/frankie-engineer/yuca/main/public/yuca.png)](https://raw.githubusercontent.com/frankie-engineer/yuca/main/public/yuca.mp4)
 <br></br>
 
-
 ## Features 
 - View items available for purchase 
 - Add items to cart 
