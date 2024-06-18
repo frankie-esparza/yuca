@@ -2,7 +2,14 @@
 A stateful grocery store app built with React, React Hooks, & Redux
 <br></br>
 
-[![Watch the video](https://storage.googleapis.com/frankie-esparza-portfolio/thumbnails/yuca.png)](https://storage.googleapis.com/frankie-esparza-portfolio/videos/yuca.mp4)
+<video controls>
+  <source 
+  src="https://storage.googleapis.com/frankie-esparza-portfolio/videos/yuca.mp4" 
+  type="video/mp4"
+  poster="https://storage.googleapis.com/frankie-esparza-portfolio/thumbnails/yuca.png"
+  >
+    Your browser does not support the video tag.
+</video>
 <br></br>
 
 ## Features 
