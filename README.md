@@ -2,7 +2,7 @@
 A stateful grocery store app built with React, React Hooks, & Redux
 <br></br>
 
-[![Watch the video](https://raw.githubusercontent.com/frankie-engineer/yuca/main/public/yuca.png)](https://raw.githubusercontent.com/frankie-engineer/yuca/main/public/yuca.mp4)
+[![Watch the video](https://storage.googleapis.com/frankie-esparza-portfolio/thumbnails/yuca.png)](https://storage.googleapis.com/frankie-esparza-portfolio/videos/yuca.mp4)
 <br></br>
 
 ## Features 
