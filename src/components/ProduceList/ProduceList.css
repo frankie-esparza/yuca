@@ -1,3 +1,5 @@
+@import '../../';
+
 .produce-list {
   display: flex;
   flex-direction: column;
@@ -10,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
-  border: 1px solid gray;
+  border: 1px solid var(--light-grey);
   border-radius: 16px;
   padding: 16px;
 }
@@ -23,11 +25,13 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  color: red;
-  background-color: white;
+  border: 2px solid var(--creme);
+  color: var(--tan);
+  background-color: var(--white);
+  margin: 5px;
 }
 
 button.selected {
-  color: white;
-  background-color: red;
+  color: var(--tan);
+  background-color: var(--creme);
 }

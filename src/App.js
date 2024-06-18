@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import Cart from './components/Cart';
 import ProduceList from './components/ProduceList';
 import { populateProduce } from './store/produce';
-import { getAllCartItems } from './store/cart';
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -23,7 +22,7 @@ function App() {
   return (
     <>
       <nav>
-        <h1>Grocery Store</h1>
+        <h1>Yuca</h1>
         <button className="checkout-button" onClick={() => setShowCart(true)}>
           <i className="fas fa-shopping-bag" />
           Checkout

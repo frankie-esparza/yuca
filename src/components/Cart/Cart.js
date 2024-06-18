@@ -6,22 +6,24 @@ import { removeProduce, getAllCartItems } from '../../store/cart';
 function Cart() {
   const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
-
-  const onPurchaseButtonClick = () => {
-    let cartIds = Object.keys(cart);
-    cartIds.forEach(id => dispatch(removeProduce(id)));
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    window.alert(
-      "Purchased the following:\n" +
-      `${cartItems.map(item => `${item.count} of ${item.name}`).join('\n')}`
-    );
-  }
-
   let cartItems = useSelector(getAllCartItems);
   let sortedCartItems = cartItems.sort((a, b) => a.order - b.order);
+  
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    let cartString = cartItems.map(item => `${item.count} of ${item.name}`).join('\n');
+    let message = "Purchased the following:\n" + cartString;
+
+    // Dispatch the action to remove all items from the cart
+    let cartIds = Object.keys(cart);
+    cartIds.forEach(id => dispatch(removeProduce(id)));
+
+    // Alert the message
+    console.log(message);
+    window.alert(message);
+  }
+
   console.log('SORTED CART ITEMS', sortedCartItems);
 
   if (!cartItems || !cartItems.length)
@@ -38,13 +40,10 @@ function Cart() {
       </ul>
       <hr />
       <form onSubmit={onSubmit}>
-        <button
-          type="submit"
-          onClick={onPurchaseButtonClick}
-        >Purchase</button>
+        <button type="submit">Purchase</button>
       </form>
     </div>
-  )
+  );
 }
 
 export default Cart;
