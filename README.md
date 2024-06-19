@@ -2,12 +2,8 @@
 A stateful grocery store app built with React, React Hooks, & Redux
 <br></br>
 
-<video 
-controls
-poster="https://storage.googleapis.com/frankie-esparza-portfolio/thumbnails/yuca.png"
-width="500">
-  <source src="https://storage.googleapis.com/frankie-esparza-portfolio/videos/yuca.mp4" type="video/mp4" />
-</video>
+![Yuca Demo](https://storage.googleapis.com/frankie-esparza-portfolio/gifs/yuca.gif)
+<br></br>
 
 ## Features 
 - View items available for purchase 
