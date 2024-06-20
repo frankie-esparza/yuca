@@ -1,5 +1,5 @@
 # 🥬 Yuca
-A stateful grocery store app built with React, React Hooks, & Redux
+A stateful grocery store app built with Redux & React
 
 ## Features 
 - 🍍 View grocery inventory
