@@ -7,7 +7,8 @@ A stateful grocery store app built with Redux & React
 - ➕ Update quantity of an item in cart
 - 💸 Purchase all items in the cart 
 <br></br>
-![Yuca Demo](https://storage.googleapis.com/frankie-esparza-portfolio/gifs/yuca.gif)
+
+<img src="https://storage.googleapis.com/frankie-esparza-portfolio/gifs/yuca.gif" width="1000">
 
 ## Overview
 **Redux Store** 
