@@ -1,6 +1,9 @@
 # 🥬 Yuca
 A stateful grocery store app built with Redux & React
 
+🎬 Watch the demo video at [frankie.engineer/more](https://frankie.engineer/more)
+<br></br>
+
 ## Features 
 - 🍍 View grocery inventory
 - 🛒 Add items to cart 
